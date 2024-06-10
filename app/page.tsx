@@ -28,13 +28,13 @@ export default function Home() {
         </div>
         <div className="flex flex-wrap gap-5 justify-center sm:justify-start">
           <Link href="https://drive.google.com/file/d/1R_RasiD_4FCw9NrVVSKif1OEzoZDsGVH/view?usp=sharing">
-          <button className="bg-[#FFD994] px-8 py-5 rounded-full mt-4 open-sans-font text-xl">View  monthly packages</button>
+          <button className="bg-[#FFD994] px-4 py-5 rounded-full mt-4 open-sans-font text-xl">View monthly packages</button>
           </Link>
           {/* contact us on whatsapp 7004948643 : Abhijit Singh*/}
           <Link href="https://wa.me/917004948643">
           <button className="bg-[#000000] flex items-center gap-1 mt-4 rounded-full open-sans-font text-xl">
             <Image src={whatsAppIcon} alt="whatsApp"width={50}  className="p-0 relative left-2" />
-            <div className="text-white pl-5 pr-8 py-5">Contact Us</div>
+            <div className="text-white pl-10 pr-16 py-5">Contact Us</div>
           </button>
           </Link>
           </div>
