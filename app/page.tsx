@@ -3,12 +3,10 @@ import Link from "next/link";
 
 import pyncLogo from "@/public/pync_logo.png";
 import whatsAppIcon from "@/public/social-whatsapp-circle-512.png";
-import background from "@/public/background.png";
 
 
 export default function Home() {
   return ( <>
-  <Image src={background} alt="background" className="absolute h-full top-0 left-0 -z-50 bg-cover"></Image>
     <div className="">
       <div className="flex flex-col justify-center sm:justify-start gap-7 p-[5%] lg:p-[5%] lg:ml-[5%]">
         <Image src={pyncLogo} alt="Pync Logo" width={225} className="mx-auto sm:mx-0" />
