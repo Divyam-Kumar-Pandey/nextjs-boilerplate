@@ -2,7 +2,38 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
+.league-spartan-font {
+  font-family: "League Spartan", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.aleo-font {
+  font-family: "Aleo", serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
+
+.open-sans-font {
+  font-family: "Open Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 600;
+  font-style: normal;
+  font-variation-settings:
+    "wdth" 100;
+}
+
+.background-image {
+  background-image: url("../public/background.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: repeat;
+}
+
+/* :root {
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
   --background-end-rgb: 255, 255, 255;
@@ -30,4 +61,4 @@ body {
   .text-balance {
     text-wrap: balance;
   }
-}
+} */
