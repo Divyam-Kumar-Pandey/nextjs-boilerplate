@@ -10,7 +10,7 @@ export default function Home() {
     <div className="">
       <div className="flex flex-col justify-center sm:justify-start gap-7 p-[5%] lg:p-[5%] lg:ml-[5%]">
         <Image src={pyncLogo} alt="Pync Logo" width={225} className="mx-auto sm:mx-0" />
-        <div className="league-spartan-font text-[2rem] sm:text-[3rem] lg:text-[3rem] leading-[42px] max-w-[600px]">
+        <div className="league-spartan-font text-[2rem] sm:text-[3rem] lg:text-[3rem] leading-[32px] sm:leading-[42px] max-w-[600px]">
           Owning your vehicle was never simpler. 
         </div>
         <div className="aleo-font text-2xl max-w-[600px]">
