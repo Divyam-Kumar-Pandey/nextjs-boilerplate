@@ -9,7 +9,7 @@ export default function Home() {
   return ( <>
     <div className="">
       <div className="flex flex-col justify-center sm:justify-start gap-7 p-[5%] lg:p-[5%] lg:ml-[5%]">
-        <Image src={pyncLogo} alt="Pync Logo" width={225} className="mx-auto sm:mx-0" />
+        <Image src={pyncLogo} alt="Pync Logo" width={225} className="mx-0" />
         <div className="league-spartan-font text-[2rem] sm:text-[3rem] lg:text-[3rem] leading-[32px] sm:leading-[42px] max-w-[600px]">
           Owning your vehicle was never simpler. 
         </div>
@@ -17,7 +17,7 @@ export default function Home() {
         We are building the one stop solution for a vehicle owner, starting with <span className="text-[#B704CD]">daily care.</span> 
         </div>
         <div>
-          <div className="league-spartan-font text-xl md:text-2xl lg:text-3xl ">
+          <div className="league-spartan-font text-2xl md:text-2xl lg:text-3xl ">
           Daily care starting <span className="text-[#B704CD]">@599</span> a month! and,
 
           </div>
