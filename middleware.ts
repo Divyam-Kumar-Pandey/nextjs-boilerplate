@@ -5,7 +5,7 @@ export async function middleware(req: NextRequest) {
   const url = req.nextUrl.pathname;
   const ua = userAgent(req);
   if(url.startsWith("/customer/dashboard")) {
-    if(ua.device.type === "mobile") {
+    if(ua.device.type === "mobile" || ua.device.type === "tablet") {
       return NextResponse.rewrite(new URL("/mobile/customer/dashboard", req.url));
     }
   }

@@ -22,7 +22,7 @@ const Sidebar = ({
   return (
     <aside className={`bg-black p-10 flex flex-col justify-between ${className}`}>
         {/* Main */}
-        <div className='flex flex-col justify-between h-3/4'>
+        <div className='flex flex-col justify-between h-3/4 gap-2'>
             {/* profile image, name, address */}
             <div className='flex flex-col text-white'>
                 <Image src={profileImage} alt='profile' width={100} height={100} />

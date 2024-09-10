@@ -45,7 +45,7 @@ const tableData = [
 
 const CxDashboard = () => {
   return (
-    <div className='flex h-screen'>
+    <div className='flex min-h-screen'>
       <Sidebar
         className="basis-1/5"
         name='Harsh Prateek'
