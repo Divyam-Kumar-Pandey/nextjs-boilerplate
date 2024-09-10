@@ -17,7 +17,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className="background-image">
+    <html lang="en" className="" data-theme="light">
       <head>
       <link 
         rel="shortcut icon" 
