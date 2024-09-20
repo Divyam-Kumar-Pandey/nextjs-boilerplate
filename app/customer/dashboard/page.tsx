@@ -1,8 +1,12 @@
-import React from 'react'
+'use client'
+import React, { useEffect } from 'react'
 import Sidebar from '@/components/Sidebar'
 import RightSidebar from '@/components/RightSidebar'
 import InfoCards from '@/components/InfoCards'
 import CleaningReportTable from '@/components/CleaningReportTable'
+
+import Image from 'next/image'
+import LoadingSvg from '@/public/dashboard/Ripple@1x-1.9s-200px-200px.svg'
 
 const tableData = [
   {
@@ -44,7 +48,21 @@ const tableData = [
 
 
 const CxDashboard = () => {
+  const [selectedVehicle, setSelectedVehicle] = React.useState(0);
+  const [isLoading, setIsLoading] = React.useState(true);
+
+  useEffect(() => {
+    const fetchData = async () => {
+      setIsLoading(false);
+    }
+
+    fetchData();
+  }, []);
+  
   return (
+    isLoading ? <div className='h-screen w-screen flex items-center justify-center'>
+      <Image src={LoadingSvg} alt='pync_logo'></Image>
+    </div> :
     <div className='flex min-h-screen'>
       <Sidebar
         className="basis-1/5"
@@ -53,7 +71,9 @@ const CxDashboard = () => {
         startDate='Sep 1, 2024'
         flatNo='I404'
         paymentStatus={true}
-        vehicles={['Jeep Compass', 'KTM Duke 250']}
+        selectedVehicle={selectedVehicle}
+        setSelectedVehicle={setSelectedVehicle}
+        vehicles={['Toyota Fortuner', 'Jeep Meridian', 'Jeep Compass', 'Harley Davidson X440']}
       />
       <main className='basis-3/5 flex flex-col gap-12 items-center py-8'>
         <InfoCards

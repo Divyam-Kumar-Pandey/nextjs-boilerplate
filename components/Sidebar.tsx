@@ -10,6 +10,8 @@ const Sidebar = ({
     flatNo,
     vehicles,
     paymentStatus,
+    selectedVehicle,
+    setSelectedVehicle
 }:{
     className: string,
     name: string, 
@@ -18,11 +20,13 @@ const Sidebar = ({
     flatNo: string,
     paymentStatus: boolean,
     vehicles: string[],
+    selectedVehicle: number,
+    setSelectedVehicle: React.Dispatch<React.SetStateAction<number>>
 }) => {
   return (
     <aside className={`bg-black p-10 flex flex-col justify-between ${className}`}>
         {/* Main */}
-        <div className='flex flex-col justify-between h-3/4 gap-2'>
+        <div className='flex flex-col justify-between h-3/4 gap-6'>
             {/* profile image, name, address */}
             <div className='flex flex-col text-white'>
                 <Image src={profileImage} alt='profile' width={100} height={100} />
@@ -35,9 +39,17 @@ const Sidebar = ({
             <div className='text-white flex flex-col gap-2'>
                 <span className='font-semibold'>Your Vehicles</span>
                 {vehicles && vehicles.length === 0 && <span>No vehicles found</span>}
-                {vehicles && vehicles.map((vehicle) => (
-                    <button key={vehicle} className='bg-[#e2e5e4] text-black px-4 py-2 rounded-md font-semibold'>{vehicle}</button>
-                ))}
+                {vehicles && vehicles.map((vehicle, index) => { 
+                    return (
+                        <button 
+                        key={vehicle} 
+                        className={`bg-[#e2e5e4] text-black px-4 py-2 rounded-md font-normal ${selectedVehicle === index ? 'bg-[#ff6f75] text-white font-semibold' : ''}`}
+                        onClick={() => setSelectedVehicle(index)}
+                        >
+                            {vehicle}
+                        </button>
+                    );
+                })}
             </div>
             {/* Payment Status */}
             <div className='flex flex-col text-white'>

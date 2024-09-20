@@ -45,9 +45,9 @@ const MobileCustomerDashboard = () => {
     return (
         <div className="flex flex-col h-screen">
             {/* Customer, Vehicle Info Card */}
-            <HeaderInfoCard name="Harsh Prateek" society="Springfields" startDate="Sep 1, 2024" flatNo="I404" vehicles={["Jeep Compass", "KTM Duke 250"]} paymentStatus={false} />
+            <HeaderInfoCard name="Harsh Prateek" society="Springfields" startDate="Sep 1, 2024" flatNo="I404 (behind I405)" vehicles={['Toyota Fortuner', 'Jeep Meridian', 'Jeep Compass', 'Harley Davidson X440']} paymentStatus={false} />
             {/* Vehicle Info Card */}
-            <VehicleInfoCard registrationNumber="22BH3415E" color="Dark Green" parkingSlot="529" packageName="589" deepCleanDay="Wednesday" weeklyOff="Saturday" />
+            <VehicleInfoCard registrationNumber="22BH3415E" color="Dark Green" parkingSlot="529 (behind 527)" packageName="589" deepCleanDay="Wednesday" weeklyOff="Saturday" />
             {/* Clean History Table */}
             <CompactCleaningReportTable tableData={tableData} />
             {/* pagination */}
