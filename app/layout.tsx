@@ -1,10 +1,13 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Inter, League_Spartan } from "next/font/google";
 import "./globals.css";
 import favicon from "./favicon.ico";
 
 
 const inter = Inter({ subsets: ["latin"] });
+const leagueSpartan = League_Spartan({
+  subsets: ["latin"]
+})
 
 export const metadata: Metadata = {
   title: "Pync",
@@ -29,7 +32,7 @@ export default function RootLayout({
         <link href="https://fonts.googleapis.com/css2?family=Aleo:ital,wght@0,100..900;1,100..900&family=League+Spartan:wght@100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet" />
         
       </head>
-      <body className={inter.className}>
+      <body className={leagueSpartan.className}>
         {children}</body>
     </html>
   );

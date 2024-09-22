@@ -1,7 +1,10 @@
+import { Work_Sans } from 'next/font/google'
+
+const workSans = Work_Sans({subsets:["latin"]})
 
 const CleaningReportTable = ({tableData}: {tableData: any}) => {
   return (
-    <table className="min-w-[60%] ">
+    <table className={`min-w-[60%] ${workSans.className}`}>
         <thead className="">
             <tr className="h-12">
                 <th className="w-[12%]">Date</th>

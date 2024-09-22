@@ -8,6 +8,10 @@ import CleaningReportTable from '@/components/CleaningReportTable'
 import Image from 'next/image'
 import LoadingSvg from '@/public/dashboard/Ripple@1x-1.9s-200px-200px.svg'
 
+import { Work_Sans } from 'next/font/google'
+
+const workSans = Work_Sans({subsets:["latin"]})
+
 const tableData = [
   {
     "Date": "7 Sep",
@@ -86,7 +90,7 @@ const CxDashboard = () => {
           weeklyOffDay='Saturday'
         />
         <CleaningReportTable tableData={tableData} />
-        <div className="join">
+        <div className={`join ${workSans.className}`}>
           <button className="join-item btn">«</button>
           <button className="join-item btn">Page 1</button>
           <button disabled className="join-item btn">»</button>
