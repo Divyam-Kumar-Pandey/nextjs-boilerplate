@@ -20,7 +20,7 @@ const CleaningReportTable = ({tableData}: {tableData: any}) => {
                     <td>{data.Date}</td>
                     <td></td>
                     <td>{data.Day}</td>
-                    <td>{data.CareType}</td>
+                    <td className='font-semibold'>{data.CareType}</td>
                 </tr>
             ))}
         </tbody>

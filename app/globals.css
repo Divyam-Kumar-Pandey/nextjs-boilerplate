@@ -2,6 +2,17 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Hide scrollbar for Chrome, Safari and Opera */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+.no-scrollbar {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+
 .league-spartan-font {
   font-family: "League Spartan", sans-serif;
   font-optical-sizing: auto;
@@ -36,4 +47,21 @@
 .custom-icon-select{
   background-image: url('../public/dashboard/down-arrow.png');
   background-size: 1rem;
+}
+
+.hero-image{
+  background-image: url('../public/hero-image.png');
+  background-repeat: no-repeat;
+  background-position: 200% 250%; 
+}
+
+.beside-contact{
+  background-image: url('../public/beside-contact.png');
+  background-repeat: no-repeat;
+  background-position: 100% -25%; 
+}
+
+.reviews-image{
+  background-image: url('../public/reviews-image.png');
+  background-position: 10% 10%;
 }
