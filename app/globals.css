@@ -52,7 +52,9 @@
 .hero-image{
   background-image: url('../public/hero-image.png');
   background-repeat: no-repeat;
-  background-position: 200% 250%; 
+  background-position-x: 670px;
+  background-position-y: 110px;
+  /* background-position: 10% 250%;  */
 }
 
 .beside-contact{

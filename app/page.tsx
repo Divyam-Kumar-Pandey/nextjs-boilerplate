@@ -19,10 +19,10 @@ export default function Home() {
         <Link href='https://wa.me/919876543210' target='_blank' className='absolute top-12 right-0 bg-[#49d660] h-16 w-24 rounded-l-full flex items-center pl-3 cursor-pointer'>
           <Image src={whatsAppIcon} alt='whatsapp' width={60} height={60} />
         </Link>
-        <div className="font-bold text-8xl max-w-[70%] my-5 leading-[5rem] tracking-tight">
+        <div className="font-bold text-8xl max-w-[60rem] my-5 leading-[5rem] tracking-tight">
           We make vehicle ownership simpler<span className="text-[#e300ff]">.</span>
         </div>
-        <div className={`${montserrat.className} text-2xl max-w-[44%] tracking-tight`}>
+        <div className={`${montserrat.className} text-2xl max-w-[40rem] tracking-tight`}>
           Building the perfect solution for all vehicle owners so they can sit back and enjoy their drives.
         </div>
       </section>
@@ -33,7 +33,7 @@ export default function Home() {
           <span className="text-[#1e9f33]">Eco </span>
           Washing Packages
         </div>
-        <div className={`${montserrat.className} text-4xl text-right max-w-[50%] flex flex-col mt-4 justify-between items-end`}>
+        <div className={`${montserrat.className} text-4xl text-right max-w-[50rem] flex flex-col mt-4 justify-between items-end`}>
           <div><span>Daily care service starting with</span>
             <div className="font-extrabold">
               <span className="text-[#e300ff]">Rs. 599/month </span>
@@ -48,60 +48,28 @@ export default function Home() {
       </section>
 
       {/* Pricing */}
-      <section id="pricing" className="flex justify-end relative p-24 pt-0">
-        <Image src={besidePricing} alt="car-care" height={650} quality={100} className="absolute -left-28" />
-        <div className="flex flex-col w-[50%] items-center">
+      <section id="pricing" className="flex justify-start relative p-24 bg-[#5f1b69]">
+        {/* pricing cards */}
+        <div className="w-[75%] h-[80vh] flex justify-between items-center bg-white rounded-2xl px-8">
           <PricingCard
-            monthlyPrice={"235 INR"}
-            pricingDescription="PER MONTH FOR 2 WHEELERS"
-            color="#46719c"
-            description={
-              <>
-                <span>6 days per week</span>
-                <span>2 polishes in a month</span>
-              </>
-            }
-            cta={true}
-          />
+            discount="33%" strikePrice="1499" price="999" period="per month per car"
+            description={<></>}
+            deepCleanDetails={{ count: 4, description: "deep cleans per month" }}
+            ecoWashDetails={{ count: 6, description: "eco washes per week" }} />
+          <div className="w-8 bg-gradient-to-r from-slate-200 from-10% to-transparent h-[75%]"></div>
           <PricingCard
-            monthlyPrice={"799 INR"}
-            pricingDescription="PER MONTH FOR CAR"
-            color="#431e63"
-            description={
-              <>
-                <span>6 days per week</span>
-                <span>2 deep cleans in a month</span>
-              </>
-            }
-            cta={true}
-          />
+            discount="20%" strikePrice="999" price="799" period="per month per car"
+            description={<></>}
+            deepCleanDetails={{ count: 2, description: "deep cleans per month" }}
+            ecoWashDetails={{ count: 6, description: "eco washes per week" }} />
+          <div className="bg-black w-[1px] my-10 h-[80%]"></div>
           <PricingCard
-            monthlyPrice={"999 INR"}
-            pricingDescription="PER MONTH FOR CAR"
-            color="#7b6e24"
-            description={
-              <>
-                <span>6 days per week</span>
-                <span>4 deep cleans in a month</span>
-              </>
-            }
-            cta={true}
-          />
-          <PricingCard
-            monthlyPrice="Services"
-            pricingDescription="FOR EVERY CUSTOMER"
-            color="#000000"
-            description={
-              <>
-                <span>24x7 support</span>
-                <span>Repairs & damages</span>
-                <span>Detailing & accessories</span>
-                <span>Used vehicle sale</span>
-              </>
-            }
-            cta={false}
-          />
+            discount="53%" strikePrice="499" price="235" period="per month per bike"
+            description={<></>}
+            deepCleanDetails={{ count: 2, description: "polishes per month" }}
+            ecoWashDetails={{ count: 6, description: "eco washes per week" }} />
         </div>
+
       </section>
 
       {/* Reach out to us */}
@@ -116,9 +84,9 @@ export default function Home() {
       </section>
 
       {/* Customer Reviews */}
-      <section id="reviews" className="bg-[#fed9bf] reviews-image h-[80vh]">
+      {/* <section id="reviews" className="bg-[#fed9bf] reviews-image h-[80vh]">
             <div className="text-[#5f1b69]">What our customers say!</div>
-      </section>  
+      </section>   */}
     </div>
   );
 }

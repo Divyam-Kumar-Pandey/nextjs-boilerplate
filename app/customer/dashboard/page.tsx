@@ -64,7 +64,7 @@ const CxDashboard = () => {
   }, []);
   
   return (
-    isLoading ? <div className='h-screen w-screen flex items-center justify-center'>
+    false ? <div className='h-screen w-screen flex items-center justify-center'>
       <Image src={LoadingSvg} alt='pync_logo'></Image>
     </div> :
     <div className='flex min-h-screen'>
